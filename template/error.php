@@ -19,7 +19,7 @@
 				<dd><input type="text" name="カナ" placeholder="例）ヤマダ　タロウ" value="$カナ$" pattern="[\u30A1-\u30FF|　| ]*" required></dd>
 			</dl>
 			<dl class="item-box">
-				<dt>お問い合わせ種別</dt>
+				<dt>ご要望</dt>
 				<dd>
 					<input type="checkbox" value="見積もり" name="ご要望[]" id="type01"><label for="type01">見積もり</label>
 					<input type="checkbox" value="制作" name="ご要望[]" id="type02"><label for="type02">制作</label>

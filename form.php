@@ -113,6 +113,9 @@ else{
 		include($template_path.$tpl_confirm);
 		$confirm_html = ob_get_contents();
 		ob_end_clean();
+		
+		//hidden値用変数定義
+		$hidden_str = '';
 
 		//確認画面に入力内容を反映
 		foreach($escape_input as $key => $val){
@@ -127,15 +130,17 @@ else{
 					}
 				}
 				$confirm_html = str_replace('$'.$key.'$',$array_val,$confirm_html);
+				$hidden_str .= '<input type="hidden" name="'.$key.'" value="'.$array_val.'">';
 			}
 			else{
 				$confirm_html = str_replace('$'.$key.'$',nl2br($val),$confirm_html);
+				$hidden_str .= '<input type="hidden" name="'.$key.'" value="'.$val.'">';
 			}
 		}
 		
 		//確認画面用hidden値
-		$check_str = '<input type="hidden" name="confirm_check" value="1">';
-		$confirm_html = str_replace('$hidden$',$check_str,$confirm_html);
+		$hidden_str .= '<input type="hidden" name="confirm_check" value="1">';
+		$confirm_html = str_replace('$hidden$',$hidden_str,$confirm_html);
 		
 		//確認画面テンプレートの出力
 		echo $confirm_html;
