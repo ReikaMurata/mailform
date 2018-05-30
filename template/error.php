@@ -3,22 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>フォームテスト</title>
-	<style>
-		html,body{
-			width: 100%;
-			height: 100%;
-		}
-		body{
-			text-align: center;
-			position: relative;
-		}
-		.wrap{
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-		}
-	</style>
+	<link href="style.css" media="all">
 </head>
 <body>
 	<div class="wrap">
