@@ -15,6 +15,7 @@ body {
 
 .wrap {
 	position: absolute;
+	width: 50%;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -23,4 +24,54 @@ body {
 	border: 1px solid #eee;
 	box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
 	border-radius: 4px;
+}
+
+.item-box{
+	display: flex;
+}
+.item-box dt{
+	background: #eee;
+	width: 200px;
+}
+.item-box dd{
+	flex: 1;
+}
+.item-box dt,
+.item-box dd{
+	padding: 15px;
+	margin: 0;
+}
+.item-box dt{
+	font-weight: bold;
+}
+.item-box dd{
+	text-align: left;
+}
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea{
+	width: 100%;
+}
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea,
+select{
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+textarea{
+	height: 100px;
+}
+input[type=submit]{
+	cursor: pointer;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 20px;
+	text-align: center;
+	width: 200px;
+	font-size: 1.5em;
+	line-height: 1;
+	font-weight: bold;
 }

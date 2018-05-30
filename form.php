@@ -98,7 +98,7 @@ if(!empty($error_flag) && count($error_flag)>0){
 else{
 	//確認画面からの送信の場合（confirm_checkの値の有無）
 	if(isset($_POST['confirm_check']) && $_POST['confirm_check']==1){
-		
+		echo '送信OK';
 		exit;
 	}
 	//確認画面の表示
