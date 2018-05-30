@@ -9,10 +9,10 @@
 	<div class="wrap">
 		<form action="form.php" method="post">
 			<div>
-				<input type="text" name="お名前" placeholder="例）山田">
+				お名前：<input type="text" name="お名前" placeholder="例）山田　太郎" required>
 			</div>
 			<div>
-				<input type="text" name="カナ" placeholder="例）ヤマダ">
+				フリガナ：<input type="text" name="カナ" placeholder="例）ヤマダ　タロウ" pattern="[\u30A1-\u30FF|　| ]*" required>
 			</div>
 			<div>
 				<input type="checkbox" value="見積もり" name="ご要望[]">見積もり
@@ -23,7 +23,7 @@
 				<input type="radio" name="性別" value="男性" id="gender1"><label for="gender1">男性</label>
 				<input type="radio" name="性別" value="女性" id="gender2"><label for="gender2">女性</label>
 			</div>
-			<div>
+			<div>オプション：
 				<select name="オプション" id="option">
 					<option value="">選択して下さい</option>
 					<option value="2018年1月1日">2018年1月1日</option>
@@ -31,13 +31,13 @@
 				</select>
 			</div>
 			<div>
-				<input type="email" name="メールアドレス" placeholder="例）murata@magnets.jp" required>
+				メールアドレス：<input type="email" name="メールアドレス" placeholder="例）murata@magnets.jp" required>
 			</div>
 			<div>
-				<input type="date" name="日付" value="">
+				電話番号：<input type="tel" name="電話番号" placeholder="例）090-0000-0000" pattern="\d{1,5}-?\d{1,4}-?\d{4,5}" required>
 			</div>
 			<div>
-				<textarea name="メッセージ"></textarea>
+				メッセージ：<textarea name="メッセージ"></textarea>
 			</div>
 			<input type="submit" value="送信">
 		</form>
