@@ -129,7 +129,7 @@ else{
 				$confirm_html = str_replace('$'.$key.'$',$array_val,$confirm_html);
 			}
 			else{
-				$confirm_html = str_replace('$'.$key.'$',$val,$confirm_html);
+				$confirm_html = str_replace('$'.$key.'$',nl2br($val),$confirm_html);
 			}
 		}
 		
