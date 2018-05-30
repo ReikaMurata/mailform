@@ -26,10 +26,10 @@
 		$error$
 		<form action="form.php" method="post">
 			<div>
-				<input type="text" name="お名前" placeholder="例）山田" value="$お名前$">
+				お名前：<input type="text" name="お名前" placeholder="例）山田" value="$お名前$" required>
 			</div>
 			<div>
-				<input type="text" name="カナ" placeholder="例）ヤマダ" value="$カナ$">
+				フリガナ：<input type="text" name="カナ" placeholder="例）ヤマダ" value="$カナ$" pattern="[\u30A1-\u30FF|　| ]*" required>
 			</div>
 			<div>
 				<input class="test" type="checkbox" name="ご要望[]" value="見積もり">見積もり
@@ -40,7 +40,7 @@
 				<input type="radio" name="性別" value="男性" id="gender1"><label for="gender1">男性</label>
 				<input type="radio" name="性別" value="女性" id="gender2"><label for="gender2">女性</label>
 			</div>
-			<div>
+			<div>オプション：
 				<select name="オプション" id="option">
 					<option value="">選択して下さい</option>
 					<option value="2018年1月1日">2018年1月1日</option>
@@ -48,13 +48,13 @@
 				</select>
 			</div>
 			<div>
-				<input type="email" name="メールアドレス" placeholder="例）murata@magnets.jp" value="$メールアドレス$">
+				メールアドレス：<input type="email" name="メールアドレス" placeholder="例）murata@magnets.jp" value="$メールアドレス$" required>
 			</div>
 			<div>
-				<input type="date" name="日付" value="$日付$">
+				電話番号：<input type="tel" name="電話番号" placeholder="例）090-0000-0000" pattern="\d{1,5}-?\d{1,4}-?\d{4,5}" value="$電話番号$" required>
 			</div>
 			<div>
-				<textarea name="メッセージ">$メッセージ$</textarea>
+				メッセージ：<textarea name="メッセージ">$メッセージ$</textarea>
 			</div>
 			<input type="submit" value="送信">
 		</form>
